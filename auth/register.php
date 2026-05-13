@@ -5,7 +5,7 @@ if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    mysqli_query($koneksi, "INSERT INTO users (username, password) VALUES ('$username', '$password')");
+    mysqli_query($conn, "INSERT INTO users (username, password) VALUES ('$username', '$password')");
 
     echo "<script>alert('Registrasi berhasil!'); window.location.href = 'login.php';</script>";
 }
@@ -14,6 +14,7 @@ if (isset($_POST['register'])) {
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
    
